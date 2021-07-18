@@ -1,0 +1,60 @@
+﻿@model EcoX9.Models.Ocorrencias
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ocorrencias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_OCO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_OCO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DESC_OCO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DESC_OCO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DT_OCO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DT_OCO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FOTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FOTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FLAG_SIT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FLAG_SIT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FLAG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FLAG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
