@@ -33,8 +33,6 @@ C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\EcoX9.pdb
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\EcoX9.genruntimeconfig.cache
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\EcoX9.csproj.CopyComplete
-C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Ocorrencias\Create.cshtml.g.cs
-C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Ocorrencias\Delete.cshtml.g.cs
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Ocorrencias\Details.cshtml.g.cs
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Ocorrencias\Edit.cshtml.g.cs
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Ocorrencias\Index.cshtml.g.cs
@@ -43,3 +41,8 @@ C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Details.cshtml.g.cs
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Edit.cshtml.g.cs
 C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Usuarios\Index.cshtml.g.cs
+C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Tipo_Ocorrencia\Create.cshtml.g.cs
+C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Tipo_Ocorrencia\Delete.cshtml.g.cs
+C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Tipo_Ocorrencia\Details.cshtml.g.cs
+C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Tipo_Ocorrencia\Edit.cshtml.g.cs
+C:\Users\alexa\OneDrive - c\Documentos\Facu\EcoX9\EcoX9\obj\Debug\netcoreapp2.1\Razor\Views\Tipo_Ocorrencia\Index.cshtml.g.cs

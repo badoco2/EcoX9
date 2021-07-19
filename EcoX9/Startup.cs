@@ -40,16 +40,7 @@ namespace EcoX9
                     options.UseMySql(Configuration.GetConnectionString("DefaultContext"), builder =>
                         builder.MigrationsAssembly("EcoX9")));
 
-            services.AddSwaggerGen(c => {
-                c.SwaggerDoc("V1",
-                    new OpenApiInfo
-                    {
-                        Title = "EcoX9",
-                        
-                        Description = "EcoX9"
-                    });
-                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); //This line
-            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,21 +59,12 @@ namespace EcoX9
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("swagger/Swager.json", "EcoX9 - v1");
-            });
-
-            var option = new RewriteOptions();
-                option.AddRedirect("^$", "swagger");
-            app.UseRewriter(option);
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Ocorrencias}/{action=Index}/{id?}");
             });
         }
     }

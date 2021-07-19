@@ -3,14 +3,16 @@ using System;
 using EcoX9.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EcoX9.Migrations
 {
     [DbContext(typeof(EcoX9Context))]
-    partial class EcoX9ContextModelSnapshot : ModelSnapshot
+    [Migration("20210719193821_tipos")]
+    partial class tipos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

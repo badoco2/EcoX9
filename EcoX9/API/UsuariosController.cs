@@ -117,23 +117,24 @@ namespace EcoX9.API
 
             return Ok(usuarios);
         }
-        // Get verifica login
-        // GET: api/Usuarios/
-        [HttpGet("{email}/{senha}")]
-        public bool GetLogin(string email, string senha)
-        {
-           return UsuariosLogin(email, senha);
-
-        }
 
         private bool UsuariosExists(long id)
         {
             return _context.tb_usuarios.Any(e => e.Id == id);
         }
 
+        // Get verifica login
+        // GET: api/Usuarios/
+        [HttpGet("{email}/{senha}")]
+        public bool GetLogin(string email, string senha)
+        {
+            return UsuariosLogin(email, senha);
+
+        }
+
         private bool UsuariosLogin(string email, string senha)
         {
-            if(_context.tb_usuarios.Any(e => e.EMAIL == email) != false)
+            if (_context.tb_usuarios.Any(e => e.EMAIL == email) != false)
             {
                 if (_context.tb_usuarios.Any(e => e.SENHA == senha) != false)
                 {

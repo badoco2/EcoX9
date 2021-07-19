@@ -1,0 +1,30 @@
+﻿@model EcoX9.Models.Tipo_Ocorrencia
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tipo_Ocorrencia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_TIPO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOME_TIPO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DESC_TIPO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DESC_TIPO)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

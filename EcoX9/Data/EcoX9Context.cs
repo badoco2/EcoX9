@@ -10,5 +10,6 @@ namespace EcoX9.Data
 
         public DbSet<Usuarios> tb_usuarios { get; set; }
         public DbSet<Ocorrencias> tb_ocorrencias { get; set; }
+        public DbSet<EcoX9.Models.Tipo_Ocorrencia> Tipo_Ocorrencia { get; set; }
     }
 }

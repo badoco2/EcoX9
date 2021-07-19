@@ -57,7 +57,7 @@ namespace EcoX9.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,COD_OCO,DESC_OCO,DT_OCO,FOTO,FLAG_SIT,FLAG,UsuariosId")] Ocorrencias ocorrencias)
+        public async Task<IActionResult> Create([Bind("Id,COD_OCO,DESC_OCO,DT_OCO,ENDERECO,BAIRRO,DESC_INFRA,PONTO_REF,FOTO,FLAG_SIT,FLAG,UsuariosId,TiposId")] Ocorrencias ocorrencias)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace EcoX9.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,COD_OCO,DESC_OCO,DT_OCO,FOTO,FLAG_SIT,FLAG,UsuariosId")] Ocorrencias ocorrencias)
+        public async Task<IActionResult> Edit(long id, [Bind("Id,COD_OCO,DESC_OCO,DT_OCO,ENDERECO,BAIRRO,DESC_INFRA,PONTO_REF,FOTO,FLAG_SIT,FLAG,UsuariosId,TiposId")] Ocorrencias ocorrencias)
         {
             if (id != ocorrencias.Id)
             {

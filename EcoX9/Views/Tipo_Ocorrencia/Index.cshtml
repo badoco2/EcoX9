@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EcoX9.Models.Tipo_Ocorrencia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Usuarios</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_TIPO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESC_TIPO)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_TIPO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESC_TIPO)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -10,22 +10,22 @@ using EcoX9.Models;
 
 namespace EcoX9.Controllers
 {
-    public class UsuariosController : Controller
+    public class Tipo_OcorrenciaController : Controller
     {
         private readonly EcoX9Context _context;
 
-        public UsuariosController(EcoX9Context context)
+        public Tipo_OcorrenciaController(EcoX9Context context)
         {
             _context = context;
         }
 
-        // GET: Usuarios
+        // GET: Tipo_Ocorrencia
         public async Task<IActionResult> Index()
         {
-            return View(await _context.tb_usuarios.ToListAsync());
+            return View(await _context.Tipo_Ocorrencia.ToListAsync());
         }
 
-        // GET: Usuarios/Details/5
+        // GET: Tipo_Ocorrencia/Details/5
         public async Task<IActionResult> Details(long? id)
         {
             if (id == null)
@@ -33,41 +33,39 @@ namespace EcoX9.Controllers
                 return NotFound();
             }
 
-            var usuarios = await _context.tb_usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuarios == null)
+            var tipo_Ocorrencia = await _context.Tipo_Ocorrencia
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (tipo_Ocorrencia == null)
             {
                 return NotFound();
             }
 
-            return View(usuarios);
+            return View(tipo_Ocorrencia);
         }
 
-        // GET: Usuarios/Create
+        // GET: Tipo_Ocorrencia/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuarios/Create
+        // POST: Tipo_Ocorrencia/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NOME,EMAIL,CHAPA,TELEFONE,CPF,SENHA,FLAG_SIT,FLAG")] Usuarios usuarios)
+        public async Task<IActionResult> Create([Bind("ID,NOME_TIPO,DESC_TIPO")] Tipo_Ocorrencia tipo_Ocorrencia)
         {
             if (ModelState.IsValid)
             {
-                usuarios.FLAG = "A";
-                usuarios.FLAG_SIT = "G";
-                _context.Add(usuarios);
+                _context.Add(tipo_Ocorrencia);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuarios);
+            return View(tipo_Ocorrencia);
         }
 
-        // GET: Usuarios/Edit/5
+        // GET: Tipo_Ocorrencia/Edit/5
         public async Task<IActionResult> Edit(long? id)
         {
             if (id == null)
@@ -75,22 +73,22 @@ namespace EcoX9.Controllers
                 return NotFound();
             }
 
-            var usuarios = await _context.tb_usuarios.FindAsync(id);
-            if (usuarios == null)
+            var tipo_Ocorrencia = await _context.Tipo_Ocorrencia.FindAsync(id);
+            if (tipo_Ocorrencia == null)
             {
                 return NotFound();
             }
-            return View(usuarios);
+            return View(tipo_Ocorrencia);
         }
 
-        // POST: Usuarios/Edit/5
+        // POST: Tipo_Ocorrencia/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,NOME,EMAIL,CHAPA,TELEFONE,CPF,SENHA,FLAG_SIT,FLAG")] Usuarios usuarios)
+        public async Task<IActionResult> Edit(long id, [Bind("ID,NOME_TIPO,DESC_TIPO")] Tipo_Ocorrencia tipo_Ocorrencia)
         {
-            if (id != usuarios.Id)
+            if (id != tipo_Ocorrencia.ID)
             {
                 return NotFound();
             }
@@ -99,12 +97,12 @@ namespace EcoX9.Controllers
             {
                 try
                 {
-                    _context.Update(usuarios);
+                    _context.Update(tipo_Ocorrencia);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuariosExists(usuarios.Id))
+                    if (!Tipo_OcorrenciaExists(tipo_Ocorrencia.ID))
                     {
                         return NotFound();
                     }
@@ -115,10 +113,10 @@ namespace EcoX9.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuarios);
+            return View(tipo_Ocorrencia);
         }
 
-        // GET: Usuarios/Delete/5
+        // GET: Tipo_Ocorrencia/Delete/5
         public async Task<IActionResult> Delete(long? id)
         {
             if (id == null)
@@ -126,30 +124,30 @@ namespace EcoX9.Controllers
                 return NotFound();
             }
 
-            var usuarios = await _context.tb_usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuarios == null)
+            var tipo_Ocorrencia = await _context.Tipo_Ocorrencia
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (tipo_Ocorrencia == null)
             {
                 return NotFound();
             }
 
-            return View(usuarios);
+            return View(tipo_Ocorrencia);
         }
 
-        // POST: Usuarios/Delete/5
+        // POST: Tipo_Ocorrencia/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long id)
         {
-            var usuarios = await _context.tb_usuarios.FindAsync(id);
-            _context.tb_usuarios.Remove(usuarios);
+            var tipo_Ocorrencia = await _context.Tipo_Ocorrencia.FindAsync(id);
+            _context.Tipo_Ocorrencia.Remove(tipo_Ocorrencia);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuariosExists(long id)
+        private bool Tipo_OcorrenciaExists(long id)
         {
-            return _context.tb_usuarios.Any(e => e.Id == id);
+            return _context.Tipo_Ocorrencia.Any(e => e.ID == id);
         }
     }
 }

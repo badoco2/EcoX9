@@ -11,46 +11,64 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.COD_OCO)
+            Codigo:
         </dt>
         <dd>
             @Html.DisplayFor(model => model.COD_OCO)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DESC_OCO)
+            Detalhes:
         </dt>
         <dd>
             @Html.DisplayFor(model => model.DESC_OCO)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DT_OCO)
+            Data Ocorrencia:
         </dt>
         <dd>
             @Html.DisplayFor(model => model.DT_OCO)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.FOTO)
+            Endereço:
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.FOTO)
+            @Html.DisplayFor(model => model.ENDERECO)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.FLAG_SIT)
+            Bairro:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BAIRRO)
+        </dd>
+        <dt>
+            Descrição do Infrator:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DESC_INFRA)
+        </dd>
+        <dt>
+            Ponto de Referencia:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PONTO_REF)
+        </dd>
+        <dt>
+            Situação da Ocorrencia:
         </dt>
         <dd>
             @Html.DisplayFor(model => model.FLAG_SIT)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.FLAG)
+            Nome Denunciante:
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.FLAG)
+            @Html.DisplayFor(model => model.Usuarios.NOME)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Usuarios)
+            Tipo Ocorrencia:
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Usuarios.Id)
+            @Html.DisplayFor(model => model.Tipo_Ocorrencia.NOME_TIPO)
         </dd>
     </dl>
 </div>
