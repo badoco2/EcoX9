@@ -105,9 +105,11 @@ class _ImageSaveState extends State<ImageSave> {
                         ),)
                       : Padding(
                         padding: const EdgeInsets.all(50.0),
-                        child: Text('Sem nenhuma foto, favor clicar no botão abaixo para registrar o fato',),
+                        child: Text('Sem nenhuma foto, favor clicar no botão abaixo para registrar a ocorrência',
+                          style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)
+                          ), 
+                        ),
                       ),
-              ),
               SizedBox(
                 height: 40,
                 child: ElevatedButton(
@@ -363,11 +365,29 @@ class _ImageSaveState extends State<ImageSave> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  onPressed: () {},
+                  onPressed: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: const Text('Denúncia'),
+                      content: const Text('Sua denúncia foi enviada com sucesso'),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, 'Cancel'),
+                          child: const Text('Cancel'),
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, 'OK'),
+                          child: const Text('OK'),
+                          ),
+                        ],
+                      ),
+                    ),
                 ),
               ),
             ),
-            
+            SizedBox(
+              height: 30,
+            ),
             ],
           ),
         ),
