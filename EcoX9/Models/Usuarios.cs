@@ -10,7 +10,9 @@ namespace EcoX9.Models
         public long Id { get; set; }
         public string NOME { get; set; }
         public string EMAIL { get; set; }
+        public int CHAPA { get; set; }
         public string TELEFONE { get; set; }
+        public string CPF { get; set; }
         public string SENHA { get; set; }
         public string FLAG_SIT { get; set; }
         public string FLAG { get; set; }
